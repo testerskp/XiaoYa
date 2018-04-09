@@ -9,7 +9,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True)
     password = db.Column(db.String(80), unique=False)
-    phone = db.Column(db.Integer, unique=False)
+    phone = db.Column(db.String(80), unique=False)
     nickname = db.Column(db.String(80), unique=False)
 
     def __repr__(self):
@@ -38,6 +38,6 @@ def query_user(name):
 if __name__ == "__main__":
 
     # print(create_user('1', 1, "123", "123"))
-    login("222","123")
+    query_user("222")
 
 
